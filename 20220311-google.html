@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>google</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            width: 100vw;
+            height: 100vh;
+        }
+        section:first-child{
+            width: 100vw;
+            height: 10%;
+            background-color: cadetblue;
+
+            
+        }
+        section:first-child > ul{
+            list-style: none;
+            width: 80vw;
+            height: 100%;
+            margin: 0 auto;
+
+        }
+        section:first-child > ul >li{
+            padding: 2vw;
+        }
+
+        section:nth-child(2){
+            background-color: aqua;
+            width: 100vw;
+            height: 75%;
+        }
+        section:nth-child(2) > .logo{
+            font-size: 30px;
+            font-weight: bold;
+            border: 3px solid red;
+        }
+        section:nth-child(2) > .search{
+            width: 70vw;
+            border: 3px solid blue;
+            height: 5vh;
+        }
+        section:nth-child(2) > .btn{
+            width: 50vw;
+            border: 3px solid green;
+            height: 5vh;
+        }
+
+        section:nth-child(3){
+            width: 100vw;
+            height: 15%;
+            background-color: cadetblue;
+
+        }
+        section:nth-child(3) > footer{
+            width: 80vw;
+            height: 80%;
+            font-size: 11px;
+            margin: 0 auto;
+        }
+        .display-flex{
+            display: flex;
+        }
+        .flex-cc {
+            justify-content: center;
+            align-items: center;
+        }
+        .flex-ec {
+            justify-content: flex-end;
+            align-items: center;
+        }
+        .column{
+            flex-direction: column;
+        }        
+        .color-pink{
+            color: pink;
+        }
+        .text-right{
+            text-align:right;
+        }
+    </style>
+
+</head>
+<body>
+    <section>
+        <ul class="display-flex flex-ec">
+            <li id="i">menu-1</li>
+            <li>menu-2</li>
+            <li>menu-3</li>
+            <li>menu-4</li>
+        </ul>
+    </section>
+    <section class=" display-flex flex-cc column">
+        <div class="logo">logo</div>
+        <div class="search" id="k">search box</div>
+        <div class="btn">button</div>
+    </section>
+    <section>
+        <footer class="display-flex flex-cc">
+            <p class="text-right">
+                Lorem ipsum dolor sit, amet consectetur 
+                <span class="color-pink">
+                    adipisicing elit.
+                </span> 
+                Odit ad voluptatibus ut vitae aut labore, consectetur voluptatum? Doloremque dolorum perspiciatis, obcaecati itaque molestias similique velit eligendi nam quia esse vel hic placeat quasi expedita tempore saepe eaque nesciunt illo molestiae aperiam fugit recusandae ducimus! Autem adipisci dolores itaque illum voluptatibus.
+            </p> 
+                
+        </footer>
+    </section>
+
+    <script>
+        //메뉴 1 누르면 검색창 borderColor = "violet"
+        
+        const i = document.querySelector('#i');
+        const k = document.querySelector('#k');
+        i.addEventListener('click',function(){
+            console.dir(k);
+            k.style.borderColor="gold";
+        });
+
+        
+
+    </script>
+</body>
+</html>

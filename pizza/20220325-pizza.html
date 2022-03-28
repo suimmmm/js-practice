@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pizza</title>
+    <link rel="stylesheet" href="./css/20220325-pizza.css">
+</head>
+<body class="flex-cc">
+    <main class="pos-rele flex-cc">
+        <div id="tomato" class="pos-rele">
+            <div id="pe-box" class="pos-rele">
+                <div id="pe" class="pos-abso"></div>
+                <div id="pe" class="pos-abso"></div>
+                <div id="pe" class="pos-abso"></div>
+                <div id="pe" class="pos-abso"></div>
+                <div id="pe" class="pos-abso"></div>
+                <div id="pe" class="pos-abso"></div>
+                <div id="pimang" class="pos-abso"></div>
+                <div id="pimang" class="pos-abso"></div>
+                <div id="pimang" class="pos-abso"></div>
+                <div id="pimang" class="pos-abso"></div>
+            </div>
+        </div>
+        <div id="dow" class="pos-abso"></div>
+    </main>
+    <script>
+        //이벤트 타겟
+        let pe_a = document.querySelectorAll("#pe");
+        // []은 배열이란 뜻인가요? 이것을 사용하는 이유는 SelectorAll 의 대상을 많은 요소를 담은건가요?
+        // 
+
+        // 배열요소 나열하기 forEach 
+        [].forEach.call(pe_a,function(pe_a){
+            pe_a.addEventListener("click", event => {
+                event.target.style.backgroundColor = "red";
+                if(event.target.style.backgroundColor == "red"){
+                    pe_a.addEventListener("click", event => {
+                        event.target.style.backgroundColor = "blue";
+                    })
+                }
+            });
+        });
+</script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2</title>
+    <style>
+        .flex{
+            display: flex;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .root{
+            width: 500px;
+            height: 500px;
+            background-color: #e4e4e4;
+            
+            flex-wrap: wrap;
+            padding: 10px;
+            overflow: hidden;
+        }
+        .root div{
+            width: 300px;
+            height: 100px;
+            background-color: red;
+        }
+        .root div:first-child{
+            left: 400px;
+            position: relative;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="root flex">
+        <div id="a"></div>
+        <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet fuga deleniti a nulla consequatur ut sint animi aspernatur necessitatibus eos, ab itaque vitae doloremque. Recusandae quisquam officiis quas cupiditate. Repellat.</span>
+        <div></div>
+    </div>
+    <script>
+        const Blue1 = document.getElementById("a");
+        Blue1.addEventListener('click', event => {
+            Blue1.style.backgroundColor="blue";
+        });
+        Blue1.addEventListener('mouseover', event => {
+            Blue1.style.backgroundColor="green";
+        });
+        Blue1.addEventListener('mousedown', event => {
+            Blue1.style.backgroundColor="violet";
+        });
+    </script>
+</body>
+</html>

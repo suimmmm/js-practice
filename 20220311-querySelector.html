@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .target  {
+            width: 100px;
+            height: 100px;
+            background-color: #ccc;
+        }
+
+
+    </style>
+    
+</head>
+<body>
+    <button class="btn"></button>
+
+    <div class="target"></div>
+
+
+    <script>
+
+        const btn = document.querySelector('.btn');
+        const target = document.querySelector('.target');
+
+        btn.addEventListener('click', function() {
+            console.log('hello');
+            console.log(target); // 그냥 기록
+            console.dir(target); // 구조 dir
+            // target.style.backgroundColor = "salmon";
+        });
+
+
+    </script>
+
+
+</body>
+</html>
