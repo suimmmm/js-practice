@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/20220330.css">
+    <title>배다른남매</title>
+</head>
+<body>
+    <div id="header" class="flex-ce">
+        <div id="box" class="flex-bc pos-rel">
+            <div id="icon-box"></div>
+            <div id="menu-btn" class="">
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </div>
+    <div id="submenu-box">
+        <div id="menu-box"></div>
+    </div>
+
+
+    <script>
+        let mainBtn=document.getElementById('box');
+        let subBox = document.getElementById('submenu-box');
+        let headBox = mainBtn.children;
+        // 박스사이즈
+        mainBtn.style.width ="80vw";
+        mainBtn.style.height ="70%";
+        mainBtn.style.margin ="0 auto";
+        // 박스 자식 스타일 지정
+        headBox[0].setAttribute('style','width: 80px;height: 100%;background-color: black;border-radius: 10px;');
+        headBox[1].setAttribute('style','width: 60px;height: 100%;position: relative;');
+        
+        console.log(headBox[0],headBox[1]);
+        //햄버거 버튼 속성값 지정
+        headBox[1].children[0].setAttribute('style','width: 60px;height: 10px;background-color: #000;position:absolute;top:45%;');
+        headBox[1].children[1].setAttribute('style','width: 60px;height: 10px;background-color: #000;position:absolute;top:80%;');
+
+
+        //서브 메뉴
+        subBox.setAttribute('style','width: 100vw;height: 100vh;position: absolute;top: 0;left: 0;background-color: tomato;z-index: -10;visibility: hidden;')
+        //메뉴 버튼 클릭 이벤트
+        // if(subBox.style.visibility = "hidden"){
+        //     headBox[1].addEventListener('click',event =>{
+        //         subBox.style.visibility = "visible";
+        //         if(subBox.style.visibility = "visible"){
+        //             headBox[1].addEventListener('click',event =>{
+        //                 subBox.style.visibility = "hidden";
+        //             });
+        //             return subBox
+        //         };
+        //     });
+        // };
+        
+        headBox[1].addEventListener('click',event => {
+            subBox.style.visibility = "visible";
+            if(subBox.style.visibility = "visible"){
+                headBox[1].addEventListener('click',event => {
+                    subBox.style.visibility = "hidden";
+                    if(subBox.st.visibility = "hidden"){
+                        headBox[1].addEventListener('click',event =>{
+                            subBox.style.visibility = "visible";
+                        })
+                    }
+                });
+            };
+            console.log("?");
+
+        });
+        
+    </script>
+</body>
+</html>
