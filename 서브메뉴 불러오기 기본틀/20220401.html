@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/20220330.css">
+    <title>서브메뉴 버튼 기본 틀</title>
+</head>
+<body class="pos-rel">
+    <div id="header" class="flex-ce">
+        <div id="box" class="flex-bc pos-rel">
+            <div id="icon-box"></div>
+            <div id="menu-btn" class="pos-rel">
+                <div id="one" class="pos-abso"></div>
+                <div id="two" class="pos-abso"></div>
+            </div>
+        </div>
+    </div>
+    <div id="submenu-box" class="pos-abso">    </div>
+
+
+    <script>
+        let mainBtn = document.getElementById("menu-btn");
+        let btnDiv = mainBtn.children;
+        let heaDer = document.getElementById("header");
+        let headBox = document.getElementById("box");
+        let iconBox = document.getElementById("icon-box");
+        let subBox = document.getElementById("submenu-box");
+        let divOne = document.getElementById("one");
+        let divTwo = document.getElementById("two");
+        let btnVisible = window.getComputedStyle(subBox).visibility;
+        console.dir(mainBtn);
+        btnVisible = "hidden";
+        console.dir(btnVisible);
+
+        //css js로 옮기기
+        
+        //header
+        heaDer.setAttribute('style', 'width: 100vw;height: 100px;z-index: 100;');
+        headBox.setAttribute('style', 'width: 80vw;height: 70%;margin:0 auto;');
+        iconBox.setAttribute('style', 'width: 80px;height: 100%;background-color:black;');
+        mainBtn.setAttribute('style', 'width: 60px;height: 100%;position: relative;trasition:1s;');
+        subBox.setAttribute('style','width: 100vw;height: 100vh;background-color: tomato;z-index: -10;visibility: hidden;');
+        // console.log(mainBtn.children[0], mainBtn.children[1]);
+        divOne.setAttribute('style', 'width: 60px;height: 10px;background-color: #000;position: absolute;top:45%;');
+        divTwo.setAttribute('style', 'width: 60px;height: 10px;background-color: #000;position: absolute;top:80%;');
+        
+        //hover in
+        mainBtn.addEventListener('mouseover', event => {
+            // console.log("?");
+            divOne.style.transform = 'rotate(45deg)';
+            divTwo.style.transform = 'rotate(-45deg)';
+            divTwo.style.top= '45%';
+        });
+        //hover out
+        mainBtn.addEventListener('mouseout', event => {
+            // console.log("??");
+            divOne.style.transform = 'none';
+            divTwo.style.transform = 'none';
+            divTwo.style.top= '80%';
+        });
+        //반복 클릭 성공..
+        mainBtn.addEventListener('click', event =>{
+            // console.log('?');
+            if(btnVisible == "hidden"){
+                btnVisible = "visible";
+                subBox.style.visibility = "visible";
+                // console.log("??");
+                // console.dir(btnVisible);
+            }
+            else if(btnVisible == "visible"){
+                subBox.style.visibility = "hidden";
+                btnVisible = "hidden";
+                // console.log("???");
+                // console.dir(btnVisible);
+            };
+        })
+    </script>
+</body>
+</html>
