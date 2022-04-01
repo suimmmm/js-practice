@@ -4,7 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/20220330.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .flex-bc{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .flex-ce{
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+        }
+        .pos-rel{
+            position: relative;
+        }
+        .pos-abso{
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    </style>
     <title>서브메뉴 버튼 기본 틀</title>
 </head>
 <body class="pos-rel">
@@ -42,7 +65,7 @@
         iconBox.setAttribute('style', 'width: 80px;height: 100%;background-color:black;');
         mainBtn.setAttribute('style', 'width: 60px;height: 100%;position: relative;trasition:1s;');
         subBox.setAttribute('style','width: 100vw;height: 100vh;background-color: tomato;z-index: -10;visibility: hidden;');
-        // console.log(mainBtn.children[0], mainBtn.children[1]);
+
         divOne.setAttribute('style', 'width: 60px;height: 10px;background-color: #000;position: absolute;top:45%;');
         divTwo.setAttribute('style', 'width: 60px;height: 10px;background-color: #000;position: absolute;top:80%;');
         
