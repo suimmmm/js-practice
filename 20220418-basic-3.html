@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root">hello</div>
+
+  <script>
+    const root = document.getElementById('root');
+
+    // root.style.width = "100vw";
+    // root.style.height = "100vh";
+
+    console.log(root.parentElement);
+    root.setAttribute('style','width=100vw;height:50vh; background-color:violet;text-align:center; line-height:50vh;');
+    root.parentElement.setAttribute('style', 'margin:0;padding:0;');
+
+    const el = document.createElement('div');
+    console.log(el);
+  </script>
+</body>
+</html>
