@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root">
+
+    
+  </div>
+
+  <script>
+    /* 
+    ? 도전해보기 ★★★★★★★★★★★★★★★★★★★★★★★★
+    TODO: 아래의 자바스크립트 명령에 대한 의도를 유추 하시오.
+    */
+    document.body.style.padding = "0";
+    // body에 패딩 값 0
+    document.body.style.margin = "0";
+    // body에 마진 값 0
+    const root = document.getElementById("root");
+    // root라는 변수에 html id가 root 인것을 불러오기
+    let widthValue = 100;
+    // 변수 선언하기
+    let heightValue = 100;
+    // 변수 선언하기
+    root.style.width = `${widthValue}vw`;
+    // root에 넓이 값 = widthValue + 'vw'
+    root.style.height = `${heightValue}vh`;
+    // root에 높이 값 = heightValue + 'vh'
+    root.style.backgroundColor = "darkblue";
+    // root에 배경색 darkblue 주기
+    let backgroundColorArray = ["#ff0000", "#333333"];
+    // 배경색을 넣을 배열 변수 선언하기
+    let setSwitch = 0;
+    // 변수 선언하기
+    root.addEventListener("click", function() {
+      // root를 눌렀을 때
+      if(setSwitch === 0) {
+        // 선언한 변수가 datatype이 숫자 이고 0이 맞는지
+        root.style.backgroundColor = backgroundColorArray[1];
+        // root 배경색을 배경색배열 인덱스 1 번 값 주기
+        setSwitch = 1;
+        // 선언한 값을 재설정해주기
+      } else {
+        // 조건이 맞지 않다면
+        root.style.backgroundColor = backgroundColorArray[0];
+        // root 배경색을 배경색배열 인덱스 0 번 값 주기
+        setSwitch = 0;
+        // 선언한 값을 재설정해주기
+      }
+    });
+  </script>
+</body>
+</html>
