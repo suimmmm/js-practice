@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin: 0;padding: 0;}
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script>
+    const root = document.getElementById('root');
+    const student = ['정수임', '손민충', '장춘형','임소희','이누리'];
+    let bak = 50;
+    let count = 0;
+
+    root.style.width = `${bak}px`; 
+    root.style.height = `${bak}px`;
+    root.style.color = '#fff';
+    root.style.backgroundColor = `rgb(${Math.random()*256},${Math.random()*256},${Math.random()*256})`;
+    
+    // console.log(root);
+    
+    root.addEventListener('click', function(e){
+      bak *= 2;
+      root.style.width = `${bak}px`; 
+      root.style.height = `${bak}px`;
+
+      root.style.backgroundColor = `rgb(${Math.random()*256},${Math.random()*256},${Math.random()*256})`;
+      root.textContent = `${student[count]}님 반갑습니다.`;
+      count++;
+
+      if(count > student.length-1){
+        count= 0;
+        bak = 50;
+      }
+    })
+  </script>
+</body>
+</html>
