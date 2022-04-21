@@ -70,7 +70,6 @@
   
   <script>
     const filterBox = document.querySelector('#filter-box');
-    const listBox = document.querySelector('#list-box');
     const list = document.querySelectorAll('a');
 
     filterBox.addEventListener('click', event =>{
@@ -80,19 +79,19 @@
 
       /*
       //선언문
-      list.forEach(listBox =>{
+      list.forEach(item =>{
         let splitList = listBox.dataset.group.split(' ');
         // ' '을 잘라서 배열
-        // console.log(splitList);
+        // console.log(item);
 
         // console.log(splitList.includes(fil));
         // button의 dataset 값이 포함되었는가?
         if(splitList.includes(fil) === true){
           // console.log('red');
-          listBox.style.backgroundColor = "red";
+          item.style.backgroundColor = "red";
         }
         else if(splitList.includes(fil) === false){
-          listBox.style.backgroundColor = "green";
+          item.style.backgroundColor = "green";
           // console.log('green');
         }
       })
