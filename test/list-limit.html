@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>리스트 갯수 제한, 추가</title>
+  <style>
+    *{margin: 0;padding: 0;list-style: none;text-decoration: none;}
+    .show{display: block;}
+    .hide{display: none;}
+    #btn{
+      width: 50px;
+      height: 50px;
+    }
+  </style>
+</head>
+<body>
+  <div id="root">
+    <ul id="box">
+      <li id="item">item01</li>
+      <li id="item">item02</li>
+      <li id="item">item03</li>
+      <li id="item">item04</li>
+      <li id="item">item05</li>
+      <li id="item">item06</li>
+      <li id="item">item07</li>
+      <li id="item">item08</li>
+      <li id="item">item09</li>
+      <li id="item">item10</li>
+      <li id="item">item11</li>
+      <li id="item">item12</li>
+      <li id="item">item13</li>
+      <li id="item">item14</li>
+      <li id="item">item15</li>
+      <li id="item">item16</li>
+      <li id="item">item17</li>
+      <li id="item">item18</li>
+      <li id="item">item19</li>
+      <li id="item">item20</li>
+    </ul>
+    <button id="btn"></button>
+  </div>
+
+  <script>
+    let ul = document.querySelector('#box');
+    let li = document.querySelectorAll('#item');
+    let li_ = li.length/5;
+    let btn = document.getElementById('btn');
+
+    console.dir(ul);
+    console.dir(li);
+    console.dir(li_);
+    console.dir(li.length);
+    
+    for(let i = 0; i<li.length;i++){
+      if(i<li_){
+        console.dir(li[i]);
+        li[i].setAttribute('class','show');
+      }
+      else{
+        console.log(li[i]);
+        li[i].setAttribute('class','hide');
+      }
+      btn.addEventListener('click', event =>{
+        li_ = li_ + 4;
+        console.log(li_ )
+        if(i<li_){
+        console.log('?');
+        li[i].setAttribute('class','show');
+        }
+        else{
+          console.log('!');
+          li[i].setAttribute('class','hide');
+        }
+      })
+    }
+  </script>
+</body>
+</html>
