@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root">
+    <div></div>
+  </div>
+
+  <script>
+    const root = document.getElementById('root');
+
+    // console.dir(root)
+    // console.log(root.children);
+    // console.log(root.children[0]);
+    // console.dir(root.children[0]);
+    // => 문자열 배열 변수 선언
+    
+    root.style.backgroundColor = "red";
+    root.style.height = "100vh"
+    
+    // root.children[0].textContent = "hi"
+    // let changText = "내일은 토요일"
+    const txtArray = ['hi',"내일은 토요일",'모래는 월요일','화요일 엑','수요일 엑','목요일 엑'];
+    // root.children[0].textContent = txtArray[0];
+
+    /*
+    알고리즘 구성 : 문서를 클릭할때마다 텍스트 바뀌기
+    1. 텍스트 목록
+    2. 목록 배열 순서대로
+    3. +1 해주기
+    4. 숫자 덧셈하는 법
+    5. 숫자 변수 만들어주기
+    */
+    function length(){
+      if(value>txtArray.length){
+          value = 0;
+          console.log(value)
+        }
+    }
+
+    function ifBox(n){
+      if(n.children[0].textContent === ""){
+        n.children[0].textContent = txtArray[0];
+      }
+      else{
+        value ++;
+        n.children[0].textContent = txtArray[value];
+
+        length();
+      }
+    }
+
+    let value = 0;
+    root.addEventListener('wheel', event=>{
+      // root.children[0].textContent = txtArray[1];
+
+      ifBox(root);
+      
+      /*
+      문서의 바디부분을 클릭하면 두번째 인수로 자리잡힌 함수내용 실행
+      함수 내용 = 알고리즘
+      root의 자식 index가 0인 태그에 txt를 문자열 "제할당하디" 
+      */
+    })
+    
+    
+    </script>
+</body>
+</html>
