@@ -67,7 +67,7 @@
       <a href="#" data-group="all b d"></a>
     </div>
   </div>
-  
+  <!--
   <script>
     const filterBox = document.querySelector('#filter-box');
     const list = document.querySelectorAll('a');
@@ -111,6 +111,55 @@
           item.style.backgroundColor = "blue";
         }
       }
+    })
+  </script>
+  -->
+
+  <script>
+    //강사님 작성
+    const root = document.getElementById('root');
+    const filterBox = root.children[0];
+    const filter = filterBox.children;
+    const listBox = root.children[1];
+    const list = listBox.children;
+
+    console.dir(root);
+    console.dir(root.children[0]);
+    console.dir(root.children[1]);
+    console.dir(filter);
+    console.dir(list);
+
+    // 강사님 작성
+    let datasetArray = [];
+
+    function itemFor(j){
+      for(item of list){
+        let itemdataValue = item.dataset.group;
+        // console.log(itemdataValue);
+
+        if(itemdataValue.includes(j) === true){
+          // console.log('?');
+          item.style.backgroundColor = "red";
+        }
+        else{
+          // console.log('!')
+          item.style.backgroundColor = "blue";
+        }
+      }
+    }
+
+    filterBox.addEventListener('click', function(e){
+      let datasetValue = e.target.dataset.value;
+      // console.log(e.target.dataset.value);
+
+      datasetArray.pop();
+      // console.log(datasetArray);
+
+      datasetArray.push(datasetValue);
+      // console.log(datasetArray);
+
+      let item;
+      itemFor(datasetArray);
     })
   </script>
 </body>
