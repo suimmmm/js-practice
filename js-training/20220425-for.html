@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <ul id="root">
+    <li>item-01</li>
+    <li>item-02</li>
+    <li>item-03</li>
+    <li>item-04</li>
+    <li>item-05</li>
+    <li>item-06</li>
+    <li>item-07</li>
+    <li>item-08</li>
+    <li>item-09</li>
+    <li>item-10</li>
+    <li>item-11</li>
+    <li>item-12</li>
+    <li>item-13</li>
+    <li>item-14</li>
+    <li>item-15</li>
+    <li>item-16</li>
+    <li>item-17</li>
+    <li>item-18</li>
+    <li>item-19</li>
+    <li>item-20</li>
+    <li>item-21</li>
+    <li>item-22</li>
+    <li>item-23</li>
+    <li>item-24</li>
+    <li>item-25</li>
+    <li>item-26</li>
+    <li>item-27</li>
+    <li>item-28</li>
+    <li>item-29</li>
+    <li>item-30</li>
+    <li>item-31</li>
+    <li>item-32</li>
+    <li>item-33</li>
+    <li>item-34</li>
+    <li>item-35</li>
+    <li>item-36</li>
+    <li>item-37</li>
+    <li>item-38</li>
+    <li>item-39</li>
+    <li>item-40</li>
+    <li>item-41</li>
+    <li>item-42</li>
+    <li>item-43</li>
+    <li>item-44</li>
+    <li>item-45</li>
+    <li>item-46</li>
+    <li>item-47</li>
+    <li>item-48</li>
+    <li>item-49</li>
+    <li>item-50</li>
+  </ul>
+
+  <script>
+    const ulRoot = document.getElementById('root');
+    console.dir(ulRoot);
+    
+    // let i = 0; if(i<10){console.log(i); i++}
+    for(let i=0; i<ulRoot.children.length;i ++ ){
+      console.log(i);
+      ulRoot.children[i].style.color = 'red';
+      if(i === 15){
+        ulRoot.children[i].textContent = '메롱';
+      }
+      if(i === 47){
+        ulRoot.children[i].textContent = '스파르타';
+        ulRoot.children[i].style.color = 'blue';
+      }
+    }
+  </script>
+</body>
+</html>
