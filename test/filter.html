@@ -123,17 +123,17 @@
     const listBox = root.children[1];
     const list = listBox.children;
 
-    console.dir(root);
-    console.dir(root.children[0]);
-    console.dir(root.children[1]);
-    console.dir(filter);
-    console.dir(list);
+    // console.dir(root);
+    // console.dir(root.children[0]);
+    // console.dir(root.children[1]);
+    // console.dir(filter);
+    // console.dir(list);
 
     // 강사님 작성
     let datasetArray = [];
 
     function itemFor(j){
-      for(item of list){
+      for(let item of list){
         let itemdataValue = item.dataset.group;
         // console.log(itemdataValue);
 
@@ -158,8 +158,16 @@
       datasetArray.push(datasetValue);
       // console.log(datasetArray);
 
-      let item;
       itemFor(datasetArray);
+
+      // ???????? 
+      // for(let i = 0; i<list.length; i++){
+      //   let setTargetItemsArray = list[i].dataset.group.split(' ');
+  
+      //   for(let k=0;k<setTargetItemsArray.length; k++){
+      //     console.log(`${i}에서 ${k}개`);
+      //   }
+      // }
     })
   </script>
 </body>
