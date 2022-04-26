@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const a = ['피카츄','라이츄','파이리','꼬부기']
+    const b = ['피카츄','라이츄','야도란','꼬부기']
+    console.log(a[2] === b[2]);
+
+    if(a[2]===b[2]){
+      console.log('!')
+    }
+    else{
+      b[2] = '파이리';
+      console.log(b)
+    }
+
+    if(a[2]===b[2]){
+      a[2] = '비둘기';
+      b[2] = '비둘기';
+      console.log(a,b);
+    }
+    else{
+      console.log('에러');
+    }
+  </script>
+</body>
+</html>

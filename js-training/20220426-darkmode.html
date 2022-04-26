@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root">
+    <button>click</button>
+  </div>
+
+  <script>
+    document.body.style.margin = '0';
+    document.body.style.padding = '0';
+    const root = document.getElementById('root');
+    const clickBtn = root.children[0];
+    // console.dir(root);
+    let bgColorValue = 333;
+    let changeBgColorValue = 'ff5555';
+
+    let value = 100;
+    root.style.width = `${value}vw`;
+    root.style.height = `${value}vh`;
+    root.style.backgroundColor = `#${bgColorValue}`;
+    root.style.transition = '1s';
+    root.style.display = 'flex';
+    root.style.flexDirection = 'column';
+    root.style.flexWrap = 'wrap';
+    root.style.overflow = 'hidden';
+
+    clickBtn.style.width = '100px';
+
+    let data = true;
+    clickBtn.addEventListener('click',e =>{
+      // console.log('hi');
+      if(data === true){
+        data = false;
+        root.style.backgroundColor = `#${changeBgColorValue}`;
+      }
+      else{
+        data = true;
+        root.style.backgroundColor = `#${bgColorValue}`;
+      }
+    })
+    root.addEventListener('wheel', event =>{
+      if(data === true){
+        data = false;
+        root.style.width = `${value / 2}vw`;
+        root.style.height = `${value / 2}vh`;
+      }
+      else{
+        data = true;
+        root.style.backgroundColor = `#${bgColorValue}`;
+        root.style.width = `${value}vw`;
+        root.style.height = `${value}vh`;
+      }
+    })
+    root.addEventListener('click', event =>{
+      let r = Math.random()*255;
+      let g = Math.random()*255;
+      let b = Math.random()*255;
+      let div = document.createElement('div');
+      root.appendChild(div);
+      div.style.width = `${value}px`;
+      div.style.height = `${value}px`;
+      div.style.backgroundColor = `rgb(${r},${g},${b})`;
+    })
+    
+
+  </script>
+  
+</body>
+</html>
