@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>hi js!</h1>
+
+  <!-- h1태그를 클릭할때마다 글씨 크기가 1px 씩 커지는 인터렉션 구현 -->
+
+  <script>
+    const h1 = document.querySelector('h1');
+    let pxValue = window.getComputedStyle(h1).fontSize;
+    // console.log(parseInt(pxValue.substring(0,2)));
+    let pxValueInt = parseInt(pxValue.substring(0,2));
+    // console.log(pxValueInt);
+
+    h1.addEventListener('click', event =>{
+      // pxValueInt++; // 증가
+      // pxValueInt--; // 감소
+      if(pxValueInt < 40){
+        pxValueInt++;
+      }
+      h1.style.fontSize = `${pxValueInt}px`;
+      console.log(pxValueInt);
+
+      if(pxValueInt === 39){
+        h1.style.color = 'red';
+      }
+    })
+  </script>
+</body>
+</html>
