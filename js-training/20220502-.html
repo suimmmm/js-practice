@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script>
+    const root = document.getElementById('root');
+    root.style.width = '100vw';
+    root.style.height = '100vh';
+    document.body.style.margin = '0';
+    document.body.style.padding = '0';
+
+    // let a = '겜'
+    // let b = '블';
+    // let c = '러';
+    // let origin = '텀';
+    // let text = origin + b + c;
+    // console.dir(root);
+    // root.textContent = text;
+    // console.log(text);
+    // text = a + b + c;
+    // console.log(text);
+
+    let innerValue = '나는 지금 코딩하고 있다.';
+    // let colorValue = window.getComputedStyle(root).color;
+    // console.log(colorValue);
+
+    root.textContent = innerValue;
+    root.style.color = '#fff';
+    
+    let current = 0;
+    root.addEventListener('click', function(){
+      // if(colorValue === 'rgb(0, 0, 0)'){
+      //   root.style.color = '#000';
+      //   colorValue = 'rgb(255, 255, 255)'
+      //   // console.log(colorValue);
+      // }
+      // else if(colorValue === 'rgb(255, 255, 255)'){
+      //   root.style.color = '#fff';
+      //   colorValue = 'rgb(0, 0, 0)';
+      //   // console.log(colorValue);
+      // }
+      root.style.color = '#000';
+
+      if(current > 0){
+        console.log('엑');
+        current++;
+        root.textContent = current;
+        }
+      else{
+        console.log('익');
+        current--;
+      }
+    })
+  </script>
+</body>
+</html>
