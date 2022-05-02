@@ -35,9 +35,18 @@
         locale:'ko',
         contentHeight:600,
         selectable:true,
-        dataClick : function(clickInfo){
-          alert('선택한 날짜' + clickInfo.dataStr);
-
+        editable:true,
+        select: function(drag){
+          let title = prompt('제목 : ');
+          if(title){
+            calendar.addEvent({
+              title:title,
+              start:drag.start,
+              end:drag.end,
+              allDay:drag.allDay
+            })
+          }
+          calendar.unselect()
         }
       });
       calendar.render();
