@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <ul id="root">
+    <li class="menu-items">menu-1</li>
+    <li class="menu-items">menu-2</li>
+    <li class="menu-items">menu-3</li>
+    <li class="menu-items">menu-4</li>
+    <li class="menu-items">menu-5</li>
+    <li class="menu-items">menu-6</li>
+    <li class="menu-items">menu-7</li>
+    <li class="menu-items">menu-8</li>
+    <li class="menu-items">menu-9</li>
+    <li class="menu-items">menu-10</li>
+  </ul>
+  <button>click 👍</button>
+
+  <script>
+    const root = document.getElementById('root');
+    // console.dir(root);
+    // const getTag = document.getElementsByTagName('ul');
+    // console.dir(getTag);
+    // const getClass = document.getElementsByClassName('menu-items');
+    // console.dir(getClass);
+    const getSelect = document.querySelectorAll('.menu-items');
+    // console.dir(getSelect);
+    const btn = document.querySelector('button');
+    root.style.width = '300px'
+    root.style.height = '500px'
+    root.style.backgroundColor = '#ff5555';
+
+    let isState = true;
+    const div_box = document.createElement('div');
+    div_box.style.position = 'absolute';
+    div_box.style.width = '100px';
+    div_box.style.height = '100px';
+    div_box.style.backgroundColor = 'blue';
+    div_box.style.display = 'none';
+    root.style.justifyContent = 'center';
+    root.style.alignItems = 'center';
+    root.appendChild(div_box);
+
+    btn.addEventListener('click',function(){
+      console.log(isState + ': 이 값이야.');
+      if(isState === true){
+        isState = false;
+        root.style.backgroundColor = '#ff0000';
+
+        root.style.display = 'flex';
+        div_box.style.display = 'block';
+
+        for(let i = 0; i < getSelect.length; i++){
+          getSelect[i].style.display = 'none';
+        }
+      }
+      else{
+        isState = true;
+        root.style.backgroundColor = '#ff5555';
+
+        root.style.display = 'block';
+        div_box.style.display = 'none';
+
+        for(let i = 0; i < getSelect.length; i++){
+          getSelect[i].style.display = 'list-item';
+        }
+      }
+    })
+  </script>
+</body>
+</html>
