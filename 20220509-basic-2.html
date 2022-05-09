@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    console.log(document.body.clientWidth); // 창 너비
+
+    let bodyValue = document.body;
+    let bgColorArr = ['black','blue','salmon'];
+
+    // css @media 제어 -> js 에서 if 문이 여러개 들어있을 것이다.
+    if(bodyValue.clientWidth > 768){
+      bodyValue.style.backgroundColor = bgColorArr[0];
+    }
+    else if(bodyValue.clientWidth > 450){
+      bodyValue.style.backgroundColor = bgColorArr[1];
+    }
+    else{
+      bodyValue.style.backgroundColor = bgColorArr[2];
+    }
+  </script>
+</body>
+</html>
