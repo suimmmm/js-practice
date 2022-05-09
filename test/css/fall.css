@@ -1,0 +1,653 @@
+@-webkit-keyframes fall-y {
+  0% {
+    top: -10px;
+  }
+  100% {
+    top: 100vh;
+  }
+}
+
+@keyframes fall-y {
+  0% {
+    top: -10px;
+  }
+  100% {
+    top: 100vh;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  width: 100vw;
+  height: 90vh;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#left {
+  width: 10%;
+  height: 100%;
+  background-color: aqua;
+}
+
+#fall-box {
+  width: 90%;
+  height: 100%;
+  background-color: cadetblue;
+  position: relative;
+}
+
+#item, #item #item {
+  width: 100px;
+  height: 100px;
+  background-color: aquamarine;
+  position: absolute;
+  -webkit-animation: fall-y 5s infinite;
+          animation: fall-y 5s infinite;
+}
+
+#item #item:nth-of-type(1) {
+  left: 18.75315vw;
+  -webkit-animation: fall-y 4.5734s linear 4.12863s infinite normal;
+          animation: fall-y 4.5734s linear 4.12863s infinite normal;
+}
+
+#item #item:nth-of-type(2) {
+  left: 38.69509vw;
+  -webkit-animation: fall-y 7.79066s linear 2.70608s infinite normal;
+          animation: fall-y 7.79066s linear 2.70608s infinite normal;
+}
+
+#item #item:nth-of-type(3) {
+  left: 99.45842vw;
+  -webkit-animation: fall-y 4.07533s linear 1.37073s infinite normal;
+          animation: fall-y 4.07533s linear 1.37073s infinite normal;
+}
+
+#item #item:nth-of-type(4) {
+  left: 68.5631vw;
+  -webkit-animation: fall-y 5.12634s linear 4.65732s infinite normal;
+          animation: fall-y 5.12634s linear 4.65732s infinite normal;
+}
+
+#item #item:nth-of-type(5) {
+  left: 89.24088vw;
+  -webkit-animation: fall-y 6.21414s linear 1.60276s infinite normal;
+          animation: fall-y 6.21414s linear 1.60276s infinite normal;
+}
+
+#item #item:nth-of-type(6) {
+  left: 54.89845vw;
+  -webkit-animation: fall-y 4.18475s linear 3.09102s infinite normal;
+          animation: fall-y 4.18475s linear 3.09102s infinite normal;
+}
+
+#item #item:nth-of-type(7) {
+  left: 69.07966vw;
+  -webkit-animation: fall-y 5.91842s linear 1.77782s infinite normal;
+          animation: fall-y 5.91842s linear 1.77782s infinite normal;
+}
+
+#item #item:nth-of-type(8) {
+  left: 27.39637vw;
+  -webkit-animation: fall-y 6.73736s linear 2.40152s infinite normal;
+          animation: fall-y 6.73736s linear 2.40152s infinite normal;
+}
+
+#item #item:nth-of-type(9) {
+  left: 19.4618vw;
+  -webkit-animation: fall-y 5.40755s linear 3.71695s infinite normal;
+          animation: fall-y 5.40755s linear 3.71695s infinite normal;
+}
+
+#item #item:nth-of-type(10) {
+  left: 95.08488vw;
+  -webkit-animation: fall-y 4.76397s linear 1.16551s infinite normal;
+          animation: fall-y 4.76397s linear 1.16551s infinite normal;
+}
+
+#item #item:nth-of-type(11) {
+  left: 96.12833vw;
+  -webkit-animation: fall-y 7.23834s linear 1.4933s infinite normal;
+          animation: fall-y 7.23834s linear 1.4933s infinite normal;
+}
+
+#item #item:nth-of-type(12) {
+  left: 57.31024vw;
+  -webkit-animation: fall-y 7.93994s linear 1.84174s infinite normal;
+          animation: fall-y 7.93994s linear 1.84174s infinite normal;
+}
+
+#item #item:nth-of-type(13) {
+  left: 76.89253vw;
+  -webkit-animation: fall-y 6.82071s linear 4.43394s infinite normal;
+          animation: fall-y 6.82071s linear 4.43394s infinite normal;
+}
+
+#item #item:nth-of-type(14) {
+  left: 95.25089vw;
+  -webkit-animation: fall-y 6.21776s linear 2.2653s infinite normal;
+          animation: fall-y 6.21776s linear 2.2653s infinite normal;
+}
+
+#item #item:nth-of-type(15) {
+  left: 67.81846vw;
+  -webkit-animation: fall-y 5.98591s linear 1.78661s infinite normal;
+          animation: fall-y 5.98591s linear 1.78661s infinite normal;
+}
+
+#item #item:nth-of-type(16) {
+  left: 12.61896vw;
+  -webkit-animation: fall-y 6.73283s linear 2.43072s infinite normal;
+          animation: fall-y 6.73283s linear 2.43072s infinite normal;
+}
+
+#item #item:nth-of-type(17) {
+  left: 44.92861vw;
+  -webkit-animation: fall-y 7.66801s linear 4.93794s infinite normal;
+          animation: fall-y 7.66801s linear 4.93794s infinite normal;
+}
+
+#item #item:nth-of-type(18) {
+  left: 24.81213vw;
+  -webkit-animation: fall-y 4.14644s linear 3.24486s infinite normal;
+          animation: fall-y 4.14644s linear 3.24486s infinite normal;
+}
+
+#item #item:nth-of-type(19) {
+  left: 52.30977vw;
+  -webkit-animation: fall-y 5.73973s linear 3.83688s infinite normal;
+          animation: fall-y 5.73973s linear 3.83688s infinite normal;
+}
+
+#item #item:nth-of-type(20) {
+  left: 78.71349vw;
+  -webkit-animation: fall-y 7.2861s linear 3.84937s infinite normal;
+          animation: fall-y 7.2861s linear 3.84937s infinite normal;
+}
+
+#item #item:nth-of-type(21) {
+  left: 76.83184vw;
+  -webkit-animation: fall-y 4.4909s linear 3.96545s infinite normal;
+          animation: fall-y 4.4909s linear 3.96545s infinite normal;
+}
+
+#item #item:nth-of-type(22) {
+  left: 80.03896vw;
+  -webkit-animation: fall-y 5.97824s linear 2.25078s infinite normal;
+          animation: fall-y 5.97824s linear 2.25078s infinite normal;
+}
+
+#item #item:nth-of-type(23) {
+  left: 62.08543vw;
+  -webkit-animation: fall-y 4.41596s linear 1.40828s infinite normal;
+          animation: fall-y 4.41596s linear 1.40828s infinite normal;
+}
+
+#item #item:nth-of-type(24) {
+  left: 26.61008vw;
+  -webkit-animation: fall-y 6.5787s linear 2.25245s infinite normal;
+          animation: fall-y 6.5787s linear 2.25245s infinite normal;
+}
+
+#item #item:nth-of-type(25) {
+  left: 41.68476vw;
+  -webkit-animation: fall-y 7.19823s linear 4.69383s infinite normal;
+          animation: fall-y 7.19823s linear 4.69383s infinite normal;
+}
+
+#item #item:nth-of-type(26) {
+  left: 6.14537vw;
+  -webkit-animation: fall-y 6.71738s linear 3.90069s infinite normal;
+          animation: fall-y 6.71738s linear 3.90069s infinite normal;
+}
+
+#item #item:nth-of-type(27) {
+  left: 35.19296vw;
+  -webkit-animation: fall-y 7.29098s linear 4.20481s infinite normal;
+          animation: fall-y 7.29098s linear 4.20481s infinite normal;
+}
+
+#item #item:nth-of-type(28) {
+  left: 55.45392vw;
+  -webkit-animation: fall-y 6.99157s linear 4.48802s infinite normal;
+          animation: fall-y 6.99157s linear 4.48802s infinite normal;
+}
+
+#item #item:nth-of-type(29) {
+  left: 36.046vw;
+  -webkit-animation: fall-y 7.55038s linear 1.25336s infinite normal;
+          animation: fall-y 7.55038s linear 1.25336s infinite normal;
+}
+
+#item #item:nth-of-type(30) {
+  left: 25.10277vw;
+  -webkit-animation: fall-y 4.20159s linear 1.36194s infinite normal;
+          animation: fall-y 4.20159s linear 1.36194s infinite normal;
+}
+
+#item #item:nth-of-type(31) {
+  left: 1.52076vw;
+  -webkit-animation: fall-y 4.21643s linear 3.24761s infinite normal;
+          animation: fall-y 4.21643s linear 3.24761s infinite normal;
+}
+
+#item #item:nth-of-type(32) {
+  left: 71.52485vw;
+  -webkit-animation: fall-y 7.41614s linear 3.46321s infinite normal;
+          animation: fall-y 7.41614s linear 3.46321s infinite normal;
+}
+
+#item #item:nth-of-type(33) {
+  left: 74.64042vw;
+  -webkit-animation: fall-y 5.25841s linear 3.62438s infinite normal;
+          animation: fall-y 5.25841s linear 3.62438s infinite normal;
+}
+
+#item #item:nth-of-type(34) {
+  left: 53.335vw;
+  -webkit-animation: fall-y 6.31584s linear 4.83562s infinite normal;
+          animation: fall-y 6.31584s linear 4.83562s infinite normal;
+}
+
+#item #item:nth-of-type(35) {
+  left: 72.85113vw;
+  -webkit-animation: fall-y 6.79158s linear 2.9446s infinite normal;
+          animation: fall-y 6.79158s linear 2.9446s infinite normal;
+}
+
+#item #item:nth-of-type(36) {
+  left: 5.86969vw;
+  -webkit-animation: fall-y 7.82174s linear 4.58765s infinite normal;
+          animation: fall-y 7.82174s linear 4.58765s infinite normal;
+}
+
+#item #item:nth-of-type(37) {
+  left: 75.97302vw;
+  -webkit-animation: fall-y 4.79169s linear 1.87798s infinite normal;
+          animation: fall-y 4.79169s linear 1.87798s infinite normal;
+}
+
+#item #item:nth-of-type(38) {
+  left: 82.45906vw;
+  -webkit-animation: fall-y 6.02447s linear 1.7064s infinite normal;
+          animation: fall-y 6.02447s linear 1.7064s infinite normal;
+}
+
+#item #item:nth-of-type(39) {
+  left: 43.13987vw;
+  -webkit-animation: fall-y 5.08932s linear 1.76441s infinite normal;
+          animation: fall-y 5.08932s linear 1.76441s infinite normal;
+}
+
+#item #item:nth-of-type(40) {
+  left: 2.35161vw;
+  -webkit-animation: fall-y 7.78847s linear 3.74823s infinite normal;
+          animation: fall-y 7.78847s linear 3.74823s infinite normal;
+}
+
+#item #item:nth-of-type(41) {
+  left: 10.9422vw;
+  -webkit-animation: fall-y 4.40213s linear 2.8841s infinite normal;
+          animation: fall-y 4.40213s linear 2.8841s infinite normal;
+}
+
+#item #item:nth-of-type(42) {
+  left: 90.25272vw;
+  -webkit-animation: fall-y 6.92132s linear 2.42141s infinite normal;
+          animation: fall-y 6.92132s linear 2.42141s infinite normal;
+}
+
+#item #item:nth-of-type(43) {
+  left: 59.87811vw;
+  -webkit-animation: fall-y 5.54572s linear 3.60579s infinite normal;
+          animation: fall-y 5.54572s linear 3.60579s infinite normal;
+}
+
+#item #item:nth-of-type(44) {
+  left: 52.94372vw;
+  -webkit-animation: fall-y 4.99447s linear 4.60281s infinite normal;
+          animation: fall-y 4.99447s linear 4.60281s infinite normal;
+}
+
+#item #item:nth-of-type(45) {
+  left: 84.37967vw;
+  -webkit-animation: fall-y 7.15085s linear 4.71414s infinite normal;
+          animation: fall-y 7.15085s linear 4.71414s infinite normal;
+}
+
+#item #item:nth-of-type(46) {
+  left: 87.68545vw;
+  -webkit-animation: fall-y 5.31452s linear 1.85213s infinite normal;
+          animation: fall-y 5.31452s linear 1.85213s infinite normal;
+}
+
+#item #item:nth-of-type(47) {
+  left: 70.09354vw;
+  -webkit-animation: fall-y 6.01765s linear 1.33369s infinite normal;
+          animation: fall-y 6.01765s linear 1.33369s infinite normal;
+}
+
+#item #item:nth-of-type(48) {
+  left: 50.98517vw;
+  -webkit-animation: fall-y 6.65649s linear 4.93857s infinite normal;
+          animation: fall-y 6.65649s linear 4.93857s infinite normal;
+}
+
+#item #item:nth-of-type(49) {
+  left: 60.29532vw;
+  -webkit-animation: fall-y 6.83819s linear 4.3903s infinite normal;
+          animation: fall-y 6.83819s linear 4.3903s infinite normal;
+}
+
+#item #item:nth-of-type(50) {
+  left: 81.59856vw;
+  -webkit-animation: fall-y 6.79608s linear 2.11442s infinite normal;
+          animation: fall-y 6.79608s linear 2.11442s infinite normal;
+}
+
+#item #item:nth-of-type(51) {
+  left: 50.48769vw;
+  -webkit-animation: fall-y 6.80595s linear 2.24861s infinite normal;
+          animation: fall-y 6.80595s linear 2.24861s infinite normal;
+}
+
+#item #item:nth-of-type(52) {
+  left: 51.01949vw;
+  -webkit-animation: fall-y 7.30519s linear 1.31298s infinite normal;
+          animation: fall-y 7.30519s linear 1.31298s infinite normal;
+}
+
+#item #item:nth-of-type(53) {
+  left: 1.87351vw;
+  -webkit-animation: fall-y 4.73789s linear 3.08606s infinite normal;
+          animation: fall-y 4.73789s linear 3.08606s infinite normal;
+}
+
+#item #item:nth-of-type(54) {
+  left: 23.83132vw;
+  -webkit-animation: fall-y 7.9872s linear 3.40377s infinite normal;
+          animation: fall-y 7.9872s linear 3.40377s infinite normal;
+}
+
+#item #item:nth-of-type(55) {
+  left: 78.85236vw;
+  -webkit-animation: fall-y 4.69387s linear 4.77125s infinite normal;
+          animation: fall-y 4.69387s linear 4.77125s infinite normal;
+}
+
+#item #item:nth-of-type(56) {
+  left: 64.74872vw;
+  -webkit-animation: fall-y 6.38172s linear 3.25293s infinite normal;
+          animation: fall-y 6.38172s linear 3.25293s infinite normal;
+}
+
+#item #item:nth-of-type(57) {
+  left: 36.35002vw;
+  -webkit-animation: fall-y 4.30425s linear 1.02271s infinite normal;
+          animation: fall-y 4.30425s linear 1.02271s infinite normal;
+}
+
+#item #item:nth-of-type(58) {
+  left: 65.05099vw;
+  -webkit-animation: fall-y 4.40641s linear 2.00205s infinite normal;
+          animation: fall-y 4.40641s linear 2.00205s infinite normal;
+}
+
+#item #item:nth-of-type(59) {
+  left: 40.90877vw;
+  -webkit-animation: fall-y 4.09659s linear 4.41013s infinite normal;
+          animation: fall-y 4.09659s linear 4.41013s infinite normal;
+}
+
+#item #item:nth-of-type(60) {
+  left: 54.44891vw;
+  -webkit-animation: fall-y 5.63085s linear 3.48216s infinite normal;
+          animation: fall-y 5.63085s linear 3.48216s infinite normal;
+}
+
+#item #item:nth-of-type(61) {
+  left: 21.78708vw;
+  -webkit-animation: fall-y 7.68147s linear 2.05207s infinite normal;
+          animation: fall-y 7.68147s linear 2.05207s infinite normal;
+}
+
+#item #item:nth-of-type(62) {
+  left: 72.45118vw;
+  -webkit-animation: fall-y 5.95841s linear 2.23516s infinite normal;
+          animation: fall-y 5.95841s linear 2.23516s infinite normal;
+}
+
+#item #item:nth-of-type(63) {
+  left: 43.34868vw;
+  -webkit-animation: fall-y 7.54959s linear 2.53451s infinite normal;
+          animation: fall-y 7.54959s linear 2.53451s infinite normal;
+}
+
+#item #item:nth-of-type(64) {
+  left: 16.24522vw;
+  -webkit-animation: fall-y 5.58924s linear 4.29904s infinite normal;
+          animation: fall-y 5.58924s linear 4.29904s infinite normal;
+}
+
+#item #item:nth-of-type(65) {
+  left: 88.2403vw;
+  -webkit-animation: fall-y 4.19966s linear 3.04314s infinite normal;
+          animation: fall-y 4.19966s linear 3.04314s infinite normal;
+}
+
+#item #item:nth-of-type(66) {
+  left: 17.53479vw;
+  -webkit-animation: fall-y 4.56772s linear 3.03719s infinite normal;
+          animation: fall-y 4.56772s linear 3.03719s infinite normal;
+}
+
+#item #item:nth-of-type(67) {
+  left: 19.95624vw;
+  -webkit-animation: fall-y 5.32131s linear 3.10386s infinite normal;
+          animation: fall-y 5.32131s linear 3.10386s infinite normal;
+}
+
+#item #item:nth-of-type(68) {
+  left: 65.48062vw;
+  -webkit-animation: fall-y 4.21004s linear 3.81496s infinite normal;
+          animation: fall-y 4.21004s linear 3.81496s infinite normal;
+}
+
+#item #item:nth-of-type(69) {
+  left: 96.8912vw;
+  -webkit-animation: fall-y 5.75695s linear 1.84513s infinite normal;
+          animation: fall-y 5.75695s linear 1.84513s infinite normal;
+}
+
+#item #item:nth-of-type(70) {
+  left: 83.79403vw;
+  -webkit-animation: fall-y 7.85916s linear 2.14874s infinite normal;
+          animation: fall-y 7.85916s linear 2.14874s infinite normal;
+}
+
+#item #item:nth-of-type(71) {
+  left: 6.87056vw;
+  -webkit-animation: fall-y 5.78935s linear 2.67441s infinite normal;
+          animation: fall-y 5.78935s linear 2.67441s infinite normal;
+}
+
+#item #item:nth-of-type(72) {
+  left: 96.88112vw;
+  -webkit-animation: fall-y 5.34315s linear 1.44796s infinite normal;
+          animation: fall-y 5.34315s linear 1.44796s infinite normal;
+}
+
+#item #item:nth-of-type(73) {
+  left: 42.68487vw;
+  -webkit-animation: fall-y 5.161s linear 1.62002s infinite normal;
+          animation: fall-y 5.161s linear 1.62002s infinite normal;
+}
+
+#item #item:nth-of-type(74) {
+  left: 15.85426vw;
+  -webkit-animation: fall-y 5.81595s linear 3.96s infinite normal;
+          animation: fall-y 5.81595s linear 3.96s infinite normal;
+}
+
+#item #item:nth-of-type(75) {
+  left: 11.01484vw;
+  -webkit-animation: fall-y 4.01774s linear 3.75244s infinite normal;
+          animation: fall-y 4.01774s linear 3.75244s infinite normal;
+}
+
+#item #item:nth-of-type(76) {
+  left: 99.76967vw;
+  -webkit-animation: fall-y 4.50238s linear 2.95944s infinite normal;
+          animation: fall-y 4.50238s linear 2.95944s infinite normal;
+}
+
+#item #item:nth-of-type(77) {
+  left: 34.61206vw;
+  -webkit-animation: fall-y 5.36986s linear 3.81046s infinite normal;
+          animation: fall-y 5.36986s linear 3.81046s infinite normal;
+}
+
+#item #item:nth-of-type(78) {
+  left: 74.75202vw;
+  -webkit-animation: fall-y 7.81132s linear 2.92231s infinite normal;
+          animation: fall-y 7.81132s linear 2.92231s infinite normal;
+}
+
+#item #item:nth-of-type(79) {
+  left: 14.53401vw;
+  -webkit-animation: fall-y 6.92159s linear 3.5231s infinite normal;
+          animation: fall-y 6.92159s linear 3.5231s infinite normal;
+}
+
+#item #item:nth-of-type(80) {
+  left: 7.21568vw;
+  -webkit-animation: fall-y 5.73375s linear 2.02582s infinite normal;
+          animation: fall-y 5.73375s linear 2.02582s infinite normal;
+}
+
+#item #item:nth-of-type(81) {
+  left: 60.91265vw;
+  -webkit-animation: fall-y 5.75482s linear 3.80936s infinite normal;
+          animation: fall-y 5.75482s linear 3.80936s infinite normal;
+}
+
+#item #item:nth-of-type(82) {
+  left: 24.83348vw;
+  -webkit-animation: fall-y 5.54406s linear 1.34518s infinite normal;
+          animation: fall-y 5.54406s linear 1.34518s infinite normal;
+}
+
+#item #item:nth-of-type(83) {
+  left: 28.36427vw;
+  -webkit-animation: fall-y 6.8203s linear 2.91593s infinite normal;
+          animation: fall-y 6.8203s linear 2.91593s infinite normal;
+}
+
+#item #item:nth-of-type(84) {
+  left: 36.09436vw;
+  -webkit-animation: fall-y 5.65187s linear 3.57016s infinite normal;
+          animation: fall-y 5.65187s linear 3.57016s infinite normal;
+}
+
+#item #item:nth-of-type(85) {
+  left: 57.81231vw;
+  -webkit-animation: fall-y 6.22027s linear 1.09782s infinite normal;
+          animation: fall-y 6.22027s linear 1.09782s infinite normal;
+}
+
+#item #item:nth-of-type(86) {
+  left: 22.98125vw;
+  -webkit-animation: fall-y 4.1761s linear 3.01848s infinite normal;
+          animation: fall-y 4.1761s linear 3.01848s infinite normal;
+}
+
+#item #item:nth-of-type(87) {
+  left: 83.82107vw;
+  -webkit-animation: fall-y 5.84698s linear 1.66633s infinite normal;
+          animation: fall-y 5.84698s linear 1.66633s infinite normal;
+}
+
+#item #item:nth-of-type(88) {
+  left: 2.80188vw;
+  -webkit-animation: fall-y 6.77016s linear 3.15595s infinite normal;
+          animation: fall-y 6.77016s linear 3.15595s infinite normal;
+}
+
+#item #item:nth-of-type(89) {
+  left: 15.03252vw;
+  -webkit-animation: fall-y 7.06028s linear 1.82264s infinite normal;
+          animation: fall-y 7.06028s linear 1.82264s infinite normal;
+}
+
+#item #item:nth-of-type(90) {
+  left: 58.42721vw;
+  -webkit-animation: fall-y 4.37152s linear 1.01039s infinite normal;
+          animation: fall-y 4.37152s linear 1.01039s infinite normal;
+}
+
+#item #item:nth-of-type(91) {
+  left: 50.74173vw;
+  -webkit-animation: fall-y 6.43449s linear 3.54957s infinite normal;
+          animation: fall-y 6.43449s linear 3.54957s infinite normal;
+}
+
+#item #item:nth-of-type(92) {
+  left: 71.97269vw;
+  -webkit-animation: fall-y 7.617s linear 3.73953s infinite normal;
+          animation: fall-y 7.617s linear 3.73953s infinite normal;
+}
+
+#item #item:nth-of-type(93) {
+  left: 46.82772vw;
+  -webkit-animation: fall-y 4.5504s linear 1.24065s infinite normal;
+          animation: fall-y 4.5504s linear 1.24065s infinite normal;
+}
+
+#item #item:nth-of-type(94) {
+  left: 58.06632vw;
+  -webkit-animation: fall-y 4.39388s linear 3.95126s infinite normal;
+          animation: fall-y 4.39388s linear 3.95126s infinite normal;
+}
+
+#item #item:nth-of-type(95) {
+  left: 31.92329vw;
+  -webkit-animation: fall-y 5.22621s linear 2.92499s infinite normal;
+          animation: fall-y 5.22621s linear 2.92499s infinite normal;
+}
+
+#item #item:nth-of-type(96) {
+  left: 97.08985vw;
+  -webkit-animation: fall-y 5.66831s linear 2.57108s infinite normal;
+          animation: fall-y 5.66831s linear 2.57108s infinite normal;
+}
+
+#item #item:nth-of-type(97) {
+  left: 44.49284vw;
+  -webkit-animation: fall-y 4.27056s linear 1.50058s infinite normal;
+          animation: fall-y 4.27056s linear 1.50058s infinite normal;
+}
+
+#item #item:nth-of-type(98) {
+  left: 61.6482vw;
+  -webkit-animation: fall-y 6.79782s linear 2.62917s infinite normal;
+          animation: fall-y 6.79782s linear 2.62917s infinite normal;
+}
+
+#item #item:nth-of-type(99) {
+  left: 63.7482vw;
+  -webkit-animation: fall-y 6.6465s linear 3.54759s infinite normal;
+          animation: fall-y 6.6465s linear 3.54759s infinite normal;
+}
+
+#item #item:nth-of-type(100) {
+  left: 92.89139vw;
+  -webkit-animation: fall-y 5.4006s linear 1.16951s infinite normal;
+          animation: fall-y 5.4006s linear 1.16951s infinite normal;
+}

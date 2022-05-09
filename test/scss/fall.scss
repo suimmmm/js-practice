@@ -1,0 +1,46 @@
+@keyframes fall-y{
+  0%{top: -10px;}
+  100%{top: 100vh;}
+}
+@mixin fall-x($nth) {
+  #item{
+    @extend #item;
+    &:nth-of-type(#{$nth}){
+      left: 100vw * random();
+      $delay: 1s + 4* random();
+      $fall-duration:4s + 4 * random();
+      $shake-duration:6s + 4 *random();
+      animation: fall-y $fall-duration linear $delay infinite normal
+    }
+  }
+}
+
+*{margin: 0;padding: 0;}
+#root{
+  width: 100vw;
+  height: 90vh;
+  overflow: hidden;
+
+display: flex;
+}
+#left{
+  width: 10%;
+  height: 100%;
+  background-color: aqua;
+}
+#fall-box{
+  width: 90%;
+  height: 100%;
+  background-color: cadetblue;
+  position: relative;
+}
+#item{
+  width: 100px;
+  height: 100px;
+  background-color: aquamarine;
+  position: absolute;
+  animation: fall-y 5s infinite;
+  @for $i from 1 through 100 {
+    @include fall-x($i);
+  }
+}
