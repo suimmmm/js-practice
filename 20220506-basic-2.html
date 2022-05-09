@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root"></div>
+  <button id="click-btn">click</button>
+
+  <script>
+    const root = document.getElementById('root');
+    root.style.width = '100px';
+    root.style.height = '100px';
+    root.style.backgroundColor = '#F2DBFF';
+
+    const clickBtn = document.getElementById('click-btn');
+    let opacityValue = 0;
+    root.style.opacity = opacityValue;
+    clickBtn.addEventListener('click',()=>{
+      // root.style.opacity = opacityValue;
+      let fade = setInterval(function(){
+        if(opacityValue < 1){
+          opacityValue += 0.1;
+        }
+        else{
+          clearInterval(fade);
+          opacityValue = 1;
+        }
+        root.style.opacity = opacityValue;
+      },1000)
+    })
+  </script>
+</body>
+</html>
