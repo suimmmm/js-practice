@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    ul{
+      border: 1px solid blue;
+    }
+    li{
+      background-color: darkcyan;
+      color: #fff;
+    }
+    li:hover{
+      background-color:cadetblue ;
+      color: #666;
+    }
+    .on{
+      font-size: 3rem;
+    }
+  </style>
+</head>
+<body>
+  <ul id="menu">
+    <li class="items">item-1</li>
+    <li class="items">item-2</li>
+    <li class="items">item-3</li>
+    <li class="items">item-4</li>
+    <li class="items">item-5</li>
+    <li class="items">item-6</li>
+    <li class="items">item-7</li>
+    <li class="items">item-8</li>
+    <li class="items">item-9</li>
+    <li class="items">item-10</li>
+  </ul>
+
+  <script>
+    const ul =document.querySelector('#menu');
+    console.log(ul)
+
+    // 간접제어
+    // addEventListener(타입(문자열), 콜백함수(첫번째인자(event 객체 : 이벤트 포인트)){})
+    // event : 코드를 줄여주는 찬구
+    ul.addEventListener('click', event => {
+      // alert('hello');
+      console.log(event);
+      
+      // 클래스를 확인 -> 클래스 붙이는 방법 배움
+      // 클래스를 붙요주는 행위 : 직관적이지 않음
+      if(event.target.classList.contains('on')){
+        /*
+        classList -> contains(): 반환값이 불라언
+            -> remove(): 클래스이름 지움, add(): 추가
+        1. 1차적인 인터렉션 
+        2. 팝업창
+        */
+        console.log('클래스에 item라는 친구가 있음');
+        event.target.classList.remove('on');
+      }
+      else{
+        event.target.classList.add('on');
+        console.log('없음');
+      }
+    })
+  </script>
+</body>
+</html>
