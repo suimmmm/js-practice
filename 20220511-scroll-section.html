@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin: 0;padding: 0; box-sizing: border-box;}
+    #root{
+      width: 100vw;
+    }
+    #root > section{
+      width: inherit;
+      height: 500px;
+      border: 1px solid;
+      text-align: center;
+      line-height: 500px;
+      font-size: 5rem;
+    }
+    #scroll-box{
+      width: 500px;
+      height: 500px;
+      position: relative;
+      overflow: hidden;
+    }
+    #box{
+      position: absolute;
+      width: fit-content;
+      height: 500px;
+      display: flex;
+      justify-content: flex-start;
+    }
+    #box > article{
+      border: 1px solid;
+      min-width: 500px;
+      height: inherit;
+      text-align: center;
+      line-height: 500px;
+      font-size: 5rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- <div id="root">
+    <section>1</section>
+    <section>2</section>
+    <section>3</section>
+    <section>4</section>
+    <section>5</section>
+  </div> -->
+  <div id="scroll-box">
+    <div id="box">
+      <article>1</article>
+      <article>2</article>
+      <article>3</article>
+      <article>4</article>
+      <article>5</article>
+    </div>
+  </div>
+
+  <script>
+    /*
+    // 세로 스크롤
+    const root = document.querySelector('#root');
+    const sections = document.querySelectorAll('section')
+    // 문서 높이 값
+    // console.log(root.offsetHeight);
+    // section 높이 값
+    // console.log(sections[0].offsetHeight);
+    let heightValue = 0;
+    window.addEventListener('click', event =>{
+      // console.log(heightValue);
+      heightValue = sections[0].offsetHeight + heightValue;
+      // heightValue = 섹션의 높이값만큼을 height만큼 대입해줘
+      if(heightValue >= root.offsetHeight){
+        heightValue = 0;
+      }
+      root.scrollTo({
+        top:heightValue,
+        behavior : 'smooth'
+      })
+    })
+    */
+
+    // 가로 스크롤
+    const scrollBox = document.getElementById('scroll-box');
+    const articles = document.querySelectorAll('article')
+
+    // console.log(articles[0].offsetWidth)
+
+    let widthValue = 0;
+    scrollBox.addEventListener('click', () =>{
+      console.log(widthValue);
+      widthValue = widthValue + articles[0].offsetWidth;
+      if(widthValue >= box.offsetWidth){
+        widthValue = 0;
+      }
+      scrollBox.scrollTo({
+        left:widthValue,
+        behavior: 'smooth'
+      })
+    })
+  </script>
+</body>
+</html>

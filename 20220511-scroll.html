@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin: 0;padding: 0;}
+    #root{
+      width: 100vw;
+      height: 3000px;
+      background: linear-gradient(0deg, #ccc, #333); /*선형 <-> 비선형(nonLinear)   gradient:값과 값 사이 중간값을 연속적으로 만들어주는*/
+      /* 각도 , 처음 색, 끝 색*/
+      position: relative;
+    }
+    #btn-box{
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      margin: 50px;
+    }
+    button{
+      display: block;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      border: none;
+      margin: 10px ;
+    }
+  </style>
+</head>
+<body>
+  <div id="root">
+    <div id="btn-box">
+      <button id="top">top</button>
+      <button id="bottom">bottom</button>
+    </div>
+  </div>
+
+  <script>
+  // console.log(window);
+  // window : 브라우저 전체를 이야기 브라우저 = JS
+  // 1. 문서는 수많은 윈도우의 자식중에 하나일뿐이다.
+  
+  // console.log(document.body.scrollHeight) // 문서의 높이값
+  let documentHeight = document.body.scrollHeight;
+  // 검색을 통해서 프로퍼티를 찾아낼 수 있다.
+  // '프로퍼티' 사용법은 알고있다.
+
+  // console.log(window.screenY)
+  // let scrollYValue = window.screenY;
+
+  const btnTop = document.getElementById('top');
+  const btnBottom = document.getElementById('bottom');
+
+  btnTop.addEventListener('click', () =>{
+    // console.log(window.pageYOffset);
+    // 스크롤을 지정한 위치로 이동
+    // 맨위로 이동하는 버튼
+    window.scrollTo({
+      top:0,
+      behavior : 'smooth'
+    }) 
+  })
+  btnBottom.addEventListener('click',() =>{
+    window.scrollTo({
+      top: documentHeight,
+      behavior : 'smooth'
+    })
+  })
+  </script>
+</body>
+</html>
