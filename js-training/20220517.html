@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>입력 event</title>
+  <style>
+    *{margin: 0;padding: 0;}
+    #root{
+      width: 100vw;
+      height: 100vh;
+      background-color:darkslateblue;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    h1{
+      text-align: center;
+      line-height: 50px;
+      width: 500px;
+      height: 50px;
+      border-radius: 30px;
+      background-color: #fff;
+      margin: 10px 0;
+      color: blueviolet;
+      font-size: small;
+    }
+    input{
+      width: 500px;
+      height: 50px;
+      border-radius: 30px;
+      background-color: slateblue;
+      border: none;
+      text-align: center;
+      line-height: 50px;
+      font-size: large;
+    }
+  </style>
+</head>
+<body>
+  <div id="root">
+    <div id="h1-box"></div>
+    <input type="text" name="" id="input" placeholder="입력">
+  </div>
+
+  <script>
+    const h1Box = document.getElementById('h1-box');
+    const input = document.getElementById('input');
+
+    input.addEventListener('keyup', event=>{
+      // console.log(input.value)
+      if(event.keyCode === 13){
+        let h1 = document.createElement('h1');
+        h1.textContent = input.value;
+        input.value = '';
+        h1Box.appendChild(h1);
+      }
+    })
+  </script>
+</body>
+</html>
