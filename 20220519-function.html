@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 배열생성기
+    function arrMaker(a){
+      let arr=[];
+      // arr.push(a);
+      arr[0] = a;
+      arr[1] = add(1,2);
+      if(typeof a === 'string'){
+        arr[2] === a.length;
+      }
+      return arr;
+    }
+    function add(a,b){
+      return a +b;
+    }
+    console.log(typeof(arrMaker('abcdefg')));
+    console.log(Array.isArray(arrMaker('d')));
+    console.log(arrMaker('abcdefg'));
+
+    // 사용자 정의 함수 || 캡슐화 || 함수형 프로그래밍
+    // 퍼즐처럼 조각내서 사용하는 고차함수 === 부품을 만든다.
+
+    // this -> 중급레벨 / 고급  
+    // this를 쓰면 함수마저도 찍어냄
+  </script>
+</body>
+</html>

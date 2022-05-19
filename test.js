@@ -37,4 +37,28 @@ const arrExample = ["피카츄", "라이츄", "파이리", "꼬부기", "버터�
 // console.log(arrExample.concat('에엑1'))
 // console.log(arrExample.concat('에엑2'))
 // console.log(arrExample.every())
-console.log(Array.isArray(arrExample))
+// console.log(Array.isArray(arrExample))
+
+
+let obj = {
+  a:1,
+  b:2,
+  c:1,
+  d:2,
+  sum : function(one, two){
+    if(typeof one === 'number' && typeof two === 'number'){
+      return one + two;
+    }
+    else{
+      console.error('데이터 타입값 잘못됨');
+    }
+  }
+}
+console.log(obj.a === obj.b || obj.a === obj.c)
+console.log(obj.a === obj.b && obj.a === obj.c)
+// === : 값으면 참 / 다르면 거짓
+// !== : 다르면 참 / 같으면 거짓
+// || or 연산자
+// && and 연산자
+console.log(obj.sum(obj.a, obj.b))
+// 타입스크립 기본문법

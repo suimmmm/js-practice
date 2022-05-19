@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button id="root">click</button>
+
+  <script>
+    const btn = document.getElementById('root');
+
+    // 익명함수 방식으로 -> 콜백함수 작성
+    // function() {} -> 매개변수자리에 함수가 들어온 경우
+    
+    // target.function() {this} <= this 는 target을 말함
+    // target()=>{this} <= this 는 target의 상위 스코프 가리킴 
+
+    // this는 함수 선언방식으로 바뀐다 = 많이 바뀜
+    btn.addEventListener('click',function(){
+      console.log(this)
+    })
+    btn.addEventListener('click',()=>{
+      console.log(this)
+    })
+
+    // function testOne(a){
+    //   function testTwo(){
+    //     console.log(a)
+    //   } 
+    //   testTwo();
+    // };
+    // this는 화살표 함수를 만나면 본인의 부모를 찾는다.
+    // 고차함수를 쓸 때, 함수를 겹겹이 쓰기 시작할때
+    function testOne(a){
+      const testTwo = () =>{
+        console.log(this)
+      }
+    }
+    testOne(1);
+
+  </script>
+</body>
+</html>
