@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button id="root">click</button>
+  <h1 id="h1">test</h1>
+  <h2 id="h2">이것은 h2임</h2>
+  <script>
+    // console.log(this)
+    // console.dir(this.document)
+    const root = window.document.getElementById('root')
+    const h1 = window.document.getElementById('h1')
+    const h2 = window.document.getElementById('h2')
+    // root.addEventListener('click',function(){
+    //   // console.log(this) // console.log(root) 
+    //   this.style.backgroundColor = 'red'
+    // })
+    function thisEvent(ele, color){
+      ele.addEventListener('click',function(){
+        this.style.color = color;
+      })
+      ele.addEventListener('mouseover',function(){
+        this.style.backgroundColor = color
+      })
+    }
+    thisEvent(root, 'red')
+    thisEvent(h1,'blue')
+    thisEvent(h2,'violet')
+
+    /*
+    1. this는 '이것'을 이야기 하기 때문에
+    -> this가 가리키는 요소를 꼭 확인해야한다.
+    -> this를 사용하면 코드가 압도적으로 줄어든다.
+      * this를 확인하지 않고 쓰는 경우 : 실수
+    */
+  </script>
+</body>
+</html>
