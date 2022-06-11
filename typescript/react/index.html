@@ -15,6 +15,28 @@
 </head>
 <body>
   <div id="root"></div>
-  <script type="text/babel" data-type="module"></script>
+  <script type="text/babel" data-type="module">
+    const root = document.getElementById('root')
+    ReactDOM.render('text', root);
+
+    let test = <section></section>;
+    ReactDOM.render(test, root)
+
+    function Section(){
+      return (
+        <ul>
+          <li>동</li>
+          <li>소</li>
+          <li>바</li>
+          <li>보</li>
+        </ul>
+      )
+    }
+    let testB = 
+    <section>
+      <Section/>
+    </section>;
+    ReactDOM.render(testB, root)
+  </script>
 </body>
 </html>
