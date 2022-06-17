@@ -61,3 +61,14 @@
   left: -20%;
   transform: translate(0%, -50%) rotate(270deg);
 }
+
+#click {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  background-color: darkviolet;
+}
+#click:nth-child(1) {
+  background-color: red;
+}

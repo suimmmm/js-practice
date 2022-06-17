@@ -16,21 +16,87 @@
       <div id="cir">
         <div id="box">
           <div id="num">1</div>
-          <div id="num">2</div>
-          <div id="num">3</div>
           <div id="num">4</div>
+          <div id="num">3</div>
+          <div id="num">2</div>
         </div>
       </div>
       <div id="btn">
         <button>click</button>
       </div>
+      <div id="btn-box">
+        <button id="click" data-btn="0">1</button>
+        <button id="click" data-btn="1">2</button>
+        <button id="click" data-btn="2">3</button>
+        <button id="click" data-btn="3">4</button>
+      </div>
     </div>
   </div>
-
+  
   <script>
     const cir = document.getElementById('cir');
+    const box = document.querySelector('button');
+    let count = 90;
+    let subNum = 0;
+    const clickNum = document.querySelectorAll('#click');
+    const btnBox = document.querySelector('#btn-box');
+    
+    const rotateFunction = setInterval(intervalFunction, 3000)
+    
+    function intervalFunction(){
+      // console.log(subNum)
+      console.log(subNum + ' -- 하기 전');
+      subNum += 1;
+      cir.style.transform = `rotate(${count * subNum}deg)`;
+      cir.style.transition = 'transform 1s';
+      console.log(subNum + '-- 한 후');
+      clickBackColor();
+      if(subNum === 4){
+        // console.log('?')
+        // cir.style.transform = `rotate(360deg)`;
+        subNumChange();
+        subNum = 0;
+        clickNum[subNum].style.backgroundColor = 'red';
+      }
+    }
+    
+    function clickBackColor(){
+      for(let j =0; j < clickNum.length; j++){
+        // console.log(j)
+        if(subNum === j){
+          clickNum[j].style.backgroundColor = 'red';
+        }
+        else{
+          clickNum[j].style.backgroundColor = 'darkviolet';
+        }
+      }
+    }
 
+    function subNumChange(){
+      setTimeout(function(){
+        cir.style.transform = `rotate(-360deg)`;
+        cir.style.transition = 'none';
+        cir.style.transform = `rotate(-0deg)`;        
+      }, 1000)
+    }
 
+    box.addEventListener('click', event => {
+      clearInterval(rotateFunction);
+    })
+    btnBox.addEventListener('click', e =>{
+      // console.log(parseInt(e.target.dataset.btn))
+      let btnNum = parseInt(e.target.dataset.btn)
+      cir.style.transform = `rotate(${count * btnNum}deg)`;
+      clickNum[btnNum].style.backgroundColor = 'red';
+      clickNum[subNum].style.backgroundColor = 'darkviolet';
+      subNum = btnNum - 1;
+
+      setTimeout(function(){
+        clearInterval(rotateFunction);
+      }, 100)
+
+      const rotateFunction = setInterval(intervalFunction, 3000)
+    })
   </script>
 </body>
 </html>
