@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin: 0;padding: 0;}
+    #root{
+      width: 100vw;
+      height: 100vh;
+      background-color: #333;
+      color: #ccc;
+    }
+  </style>
+</head>
+<body>
+  <div id="root">
+    <h1>111</h1>
+    <h1>222</h1>
+  </div>
+
+  <script>
+    const root = document.getElementById('root')
+    let bgColorValue = 0;
+    let bgColor = `rgb(${bgColorValue},${bgColorValue},${bgColorValue}`;
+    root.style.backgroundColor = bgColor;
+
+    root.addEventListener('mousemove', event =>{
+      console.log(event.offsetX)
+      root.children[0].textContent = event.offsetX
+      root.children[1].textContent = event.offsetY
+    })
+
+    // 퍼센트
+    // 색깔값은 흰색 255, 검은색 0
+    // -> 퍼센트로 넣을수 있을지
+    function percentColor(total, value){
+      // 전체값 -> 숫자 --> 몇퍼센트인가?
+      let result = Math.floor(value*255 / total);
+      // console.log(result)
+      return result
+    }
+    percentColor(100,35)
+
+    // 브라우저 윗방향 0%, 맨 아래 100%
+    // -> 퍼센트로 만들 수 있는지
+    // -> 전체값을 가져와야함
+    console.dir(root.offsetHeight) // ->100% 높이값 
+    // 브라우저 높이 값의 50%에 해당하는 px 얼마?
+    let totalHeight = root.offsetHeight;
+    function percentOffset(total, value){
+      // 전체값 -> 퍼센트 --> 얼마야?
+      let result = Math.floor((total *25) / value) -1;
+      console.log(result)
+      return result
+    }
+    percentOffset(totalHeight, 50)
+
+  </script>
+</body>
+</html>
