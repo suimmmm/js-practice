@@ -4,16 +4,68 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/index.css">
   <title>Document</title>
 </head>
 <body>
   <div id="root">
-    <div id="top">
-      <img width="100px" height="80px" src="" alt="">
-    </div>
     <div id="turn-wrap">
-      #center>#
+      <div id="center">
+        <img width="100px" height="80px" src="" alt="">
+      </div>
+      <div id="cir-wrap">
+        <div id="cir-box">
+          <button id="one"></button>
+          <button id="two"></button>
+        </div>
+      </div>
     </div>
   </div>
+
+  <script>
+    const earth = document.getElementById('one');
+    const mate = document.getElementById('two');
+    const cirBox = document.getElementById('cir-box')
+
+    console.dir(cirBox.offsetWidth)
+
+    let windowWidth = cirBox.clientWidth / 2;
+    let windowHeight = cirBox.clientHeight / 2;
+    let divHalf =  25;
+    let earthAngle = 0;
+    let mateAngle = 0;
+
+    let revolution = setInterval(revolFunction, 1000/30);
+
+    function revolFunction(){
+      let earthLeft = windowWidth - divHalf + (windowWidth - 100) * Math.cos(earthAngle);
+      let earthTop = windowHeight - divHalf + (windowHeight - 100) * Math.sin(earthAngle);
+  
+      earth.style.left = `${earthLeft}px`;
+      earth.style.top = `${earthTop}px`;
+  
+      let mateLeft = windowWidth + (windowWidth - 70) * Math.cos(mateAngle);
+      let mateTop = windowHeight + (windowHeight - 70) * Math.sin(mateAngle);
+  
+      mate.style.left = `${mateLeft}px`;
+      mate.style.top = `${mateTop}px`;
+  
+      earthAngle += 0.0085;
+      mateAngle += 0.0055;
+    }
+
+    function eventFunction(){
+      earth.addEventListener('mouseenter', function(){
+        clearInterval(revolution);
+        console.log('?!')
+        
+        earth.addEventListener('click', function(){
+          earthAngle = 0;
+          mateAngle = 0;
+          let revolution = setInterval(revolFunction, 1000/30);
+        })
+      })
+    }
+  </script>
 </body>
 </html>
